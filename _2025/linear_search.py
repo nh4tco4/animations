@@ -86,7 +86,7 @@ class LinearSearch(Scene):
         target_group = self.create_target(target, scale, opacity)
         target_group.next_to(elements, DOWN, buff=0.9)
 
-        self.play(AnimationGroup(FadeIn(elements), FadeIn(target_group)))
+        self.add(elements, target_group)
         self.wait(1)
 
         self.linear_search_animation(numbers, elements, target_group, target)
